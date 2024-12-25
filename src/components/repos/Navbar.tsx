@@ -13,7 +13,7 @@ import MenuItems from "./MenuItems";
 
 const Navbar = () => {
   return (
-    <nav className="w-full lg:hidden  p-4 border-b border-[#E9EAEB]">
+    <nav className="w-full lg:hidden bg-white  p-4 border-b border-[#E9EAEB] fixed top-0 z-50">
       <div className="flex justify-between items-center">
         <LogoName classes="text-2xl flex items-center" />
         <Sheet>
@@ -21,11 +21,12 @@ const Navbar = () => {
             <Image src={"/repos/menu.svg"} alt="menu" height={24} width={24} />
           </SheetTrigger>
           <SheetContent side={"top"} className="bg-white">
-            <SheetTitle></SheetTitle>
             <SheetHeader>
-              <SheetDescription>
+              <SheetTitle></SheetTitle>
+              <SheetDescription></SheetDescription>
+              <div>
                 <MenuItems />
-              </SheetDescription>
+              </div>
             </SheetHeader>
           </SheetContent>
         </Sheet>

@@ -12,22 +12,24 @@ const MenuItems = () => {
       <div className="flex flex-col w-full gap-4">
         <LogoName classes="text-2xl flex items-center" />
         <DropdownSelect />
-        <ul className="space-y-4">
-          {menuItems.map((item, index) => (
-            <li
-              onClick={() => setButtonClicked(item.name)}
-              key={index}
-              className={`flex items-center space-x-3 px-3 py-2 font-semibold text-[#414651] cursor-pointer ${
-                buttonClicked === item.name
-                  ? "text-white bg-[#1570EF] rounded-lg"
-                  : ""
-              }`}
-            >
-              <span>{React.createElement(item.icon, { size: 24 })}</span>
-              <span>{item.name}</span>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <ul className="space-y-4">
+            {menuItems.map((item, index) => (
+              <li
+                onClick={() => setButtonClicked(item.name)}
+                key={index}
+                className={`flex items-center space-x-3 px-3 py-2 font-semibold text-[#414651] cursor-pointer ${
+                  buttonClicked === item.name
+                    ? "text-white bg-[#1570EF] rounded-lg"
+                    : ""
+                }`}
+              >
+                <span>{React.createElement(item.icon, { size: 24 })}</span>
+                <span>{item.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div className="w-full">
         <button

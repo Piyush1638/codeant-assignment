@@ -3,7 +3,7 @@ import React from "react";
 
 const Features = () => {
   return (
-    <div className="rounded-3xl bg-white me-4 shadow-lg ">
+    <div className="rounded-3xl bg-white me-4 shadow-[0_2px_10px_rgba(0,0,0,0.2)] ">
       <div className="flex items-center gap-2 px-4 py-3 text-font font-bold text-lg border-b border-[#E6E8F0]">
         <Image src={"/logo.svg"} alt="logo" height={31} width={28} />
         AI to Detect & Autofix Bad Code

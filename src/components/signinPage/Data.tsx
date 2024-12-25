@@ -3,7 +3,8 @@ import React from "react";
 
 const Data = () => {
   return (
-    <div className="flex-container px-6 py-3 w-1/2  rounded-3xl bg-white shadow-lg absolute -bottom-32 right-0">
+    <div className="flex-container px-6 py-3 w-1/2  rounded-3xl bg-white shadow-[0_2px_10px_rgba(0,0,0,0.2)]
+ absolute -bottom-32 right-0">
       <div className="w-full h-full flex flex-col gap-4">
         <div className="flex items-center justify-between w-full">
           <div className="bg-[#9D90FA40] rounded-full p-3">

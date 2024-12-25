@@ -12,11 +12,10 @@ const RepositoryList = ({
 }) => {
   const [repositories, setRepositories] = useState<Repos[]>([]);
   const [searchRepository, setSearchRepository] = useState<Repos[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const fetchRepos = async () => {
     try {
-      setLoading(true);
       const response = await fetch(
         "https://api.github.com/users/piyush1638/repos"
       );
@@ -48,7 +47,7 @@ const RepositoryList = ({
   return (
     <div className="">
       {loading ? (
-        <div className="h-full flex justify-center items-center">
+        <div className="h-full flex justify-center items-center py-20">
           <div className="h-10 w-10 rounded-full animate-spin border-b border-blue-500 mx-auto my-auto" />
         </div>
       ) : searchRepository.length > 0 ? (
@@ -56,7 +55,7 @@ const RepositoryList = ({
           <RepositoryCard key={index} repo={repo} />
         ))
       ) : (
-        <div className="h-full flex justify-center items-center">
+        <div className="h-full flex justify-center items-center py-20">
           <h1 className="text-xl font-semibold text-font">
             No repositories found
           </h1>

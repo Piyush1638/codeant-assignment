@@ -14,7 +14,7 @@ const page = () => {
     <div className="flex lg:flex-row flex-col min-h-screen sm:h-screen">
       <Sidebar />
       <Navbar/>
-      <main className="flex-1 sm:p-6  bg-[#FAFAFA] min-h-screen">
+      <main className="flex-1 sm:p-6  bg-[#FAFAFA] min-h-screen my-16 lg:my-0">
         <div className="bg-white rounded-xl border border-[#E9EAEB] h-full overflow-y-auto pt-4 px-4">
           <header className="flex sm:flex-row flex-col sm:justify-between gap-2 sm:items-center py-4">
             <h1 className="text-2xl font-semibold flex flex-col">
@@ -48,6 +48,7 @@ const page = () => {
               className="w-full rounded-lg outline-none placeholder:text-[#414651]"
             />
           </div>
+          <hr />
           <RepositoryList search={search} setTotalRepos={setTotalRepos} />
         </div>
       </main>
